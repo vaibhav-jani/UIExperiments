@@ -7,6 +7,7 @@ import android.support.v4.app.ActivityOptionsCompat;
 import android.support.v4.util.Pair;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.view.animation.AccelerateDecelerateInterpolator;
 import android.view.animation.Animation;
 import android.view.animation.LinearInterpolator;
 import android.widget.ImageView;
@@ -50,15 +51,15 @@ public class StartMatchActivity extends AppCompatActivity {
     private void animate() {
 
         final CircularPropertyAnimation anim2 = new CircularPropertyAnimation(iv2, ivCircle, 180);
-        anim2.setInterpolator(new LinearInterpolator());
-        anim2.setDuration(11000);
+        anim2.setInterpolator(new AccelerateDecelerateInterpolator());
+        anim2.setDuration(10000);
         //anim2.setRepeatCount(100);
         iv2.startAnimation(anim2);
 
 
         final CircularPropertyAnimation anim = new CircularPropertyAnimation(iv1, ivCircle, 0);
-        anim.setInterpolator(new LinearInterpolator());
-        anim.setDuration(11000);
+        anim.setInterpolator(new AccelerateDecelerateInterpolator());
+        anim.setDuration(10000);
         //anim.setRepeatCount(100);
         iv1.startAnimation(anim);
 
@@ -91,14 +92,14 @@ public class StartMatchActivity extends AppCompatActivity {
 
         final CircularViewAnimation anim2 = new CircularViewAnimation(iv2, ivCircle, 180);
         anim2.setInterpolator(new LinearInterpolator());
-        anim2.setDuration(11000);
+        anim2.setDuration(13000);
         //anim2.setRepeatCount(100);
         iv2.startAnimation(anim2);
 
 
         final CircularViewAnimation anim = new CircularViewAnimation(iv1, ivCircle, 0);
         anim.setInterpolator(new LinearInterpolator());
-        anim.setDuration(11000);
+        anim.setDuration(13000);
         //anim.setRepeatCount(100);
         iv1.startAnimation(anim);
 
