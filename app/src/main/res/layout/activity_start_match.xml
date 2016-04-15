@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.StartMatchActivity">
+
+    <RelativeLayout
+        android:id="@+id/rlAnimate"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true">
+
+        <ImageView
+            android:id="@+id/ivCircle"
+            android:layout_width="280dp"
+            android:layout_height="280dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/circle" />
+
+        <ui.RoundedImageView
+            android:id="@+id/iv2"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/circle"
+            android:scaleType="center"
+            android:src="@drawable/shifu_action"
+            android:transitionName="iv2" />
+
+        <ui.RoundedImageView
+            android:id="@+id/iv1"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/circle"
+            android:scaleType="center"
+            android:src="@drawable/panda"
+            android:transitionName="iv1" />
+
+    </RelativeLayout>
+
+    <ui.RoundedImageView
+        android:id="@+id/ivCenter"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_centerInParent="true"
+        android:scaleType="center"
+        android:src="@drawable/tao"
+        android:visibility="gone" />
+</RelativeLayout>
