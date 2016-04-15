@@ -8,15 +8,20 @@ import android.support.v4.util.Pair;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.example.vaibhav.uifactory.R;
+
+import ui.ProgressAnimator;
 
 public class MainActivity extends AppCompatActivity {
 
     private TextView tvStart;
 
     private ImageView iv1;
+
+    private ProgressBar progressBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +47,28 @@ public class MainActivity extends AppCompatActivity {
         });
 
         iv1 = (ImageView) findViewById(R.id.iv1);
+
+        progressBar = (ProgressBar) findViewById(R.id.progressBar);
+
+        final ProgressAnimator progressAnimator = new ProgressAnimator(progressBar);
+
+        progressBar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                int progress = progressBar.getProgress();
+
+                if(progress < 100) {
+
+                    progressAnimator.moveProgress(20);
+
+                } else {
+
+                    progressAnimator.moveProgress(-60);
+                }
+
+            }
+        });
     }
 
     private void start() {
@@ -54,6 +81,7 @@ public class MainActivity extends AppCompatActivity {
         ActivityOptionsCompat options = ActivityOptionsCompat.
                 makeSceneTransitionAnimation(this, pair1);
         startActivity(intent, options.toBundle());
+
     }
 
     private void blink() {

@@ -54,6 +54,16 @@ public class PixelUtils {
         return width;
     }
 
+    public static float screenHeight(Activity activity){
+        Display display = activity.getWindowManager().getDefaultDisplay();
+        Point size = new Point();
+        display.getSize(size);
+        int width = size.x;
+        int height = size.y;
+
+        return height;
+    }
+
     public static int getRandomColor(){
 
         Random random = new Random();
