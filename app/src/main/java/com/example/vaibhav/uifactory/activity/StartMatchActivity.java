@@ -2,6 +2,7 @@ package com.example.vaibhav.uifactory.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.v4.app.ActivityOptionsCompat;
 import android.support.v4.util.Pair;
 import android.support.v7.app.AppCompatActivity;
@@ -37,7 +38,13 @@ public class StartMatchActivity extends AppCompatActivity {
 
         initViews();
 
-        animate();
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                animate();
+            }
+        }, 100);
+        //animate();
     }
 
     private void animate() {
