@@ -11,6 +11,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.vaibhav.uifactory.R;
+import com.example.vaibhav.uifactory.utils.PixelUtils;
 
 public class MatchActivity extends AppCompatActivity {
 
@@ -80,7 +81,7 @@ public class MatchActivity extends AppCompatActivity {
                         if (tvStart.getVisibility() == View.VISIBLE) {
                             tvStart.setVisibility(View.INVISIBLE);
                         } else {
-                            //tvStart.setTextColor(PixelUtils.getRandomColor());
+                            tvStart.setTextColor(PixelUtils.getRandomColor());
                             tvStart.setVisibility(View.VISIBLE);
                         }
                         blink();
